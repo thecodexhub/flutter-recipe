@@ -1,4 +1,4 @@
 # Flutter Recipe
 
-Flutter Recipe application.
+Flutter recipe application.
 
