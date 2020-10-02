@@ -43,3 +43,5 @@ _Note: This project is made using Edamam API, to know more click [here](https://
 
 - [ ] Create the `DetailsScreen` in a webview that will load a URL from the API and show inside the application
 
+### If you liked this repository then please give it a star ⭐
+
