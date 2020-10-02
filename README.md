@@ -1,4 +1,4 @@
 # Flutter Recipe
 
-A new Flutter application.
+Flutter Recipe application.
 
