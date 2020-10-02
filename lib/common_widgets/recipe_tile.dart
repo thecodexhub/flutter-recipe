@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterrecipe/helpers/dynamic_theme.dart';
 
 class RecipeTile extends StatelessWidget {
   const RecipeTile({
@@ -19,6 +20,7 @@ class RecipeTile extends StatelessWidget {
       elevation: 2.0,
       child: Container(
         decoration: BoxDecoration(
+          color: isThemeDark(context) ? Colors.grey[800] : Colors.white,
           borderRadius: BorderRadius.circular(8.0),
         ),
         child: Column(
@@ -46,7 +48,7 @@ class RecipeTile extends StatelessWidget {
                     recipeName,
                     style: TextStyle(
                       fontSize: 16.0,
-                      color: Colors.black,
+                      //color: Colors.black, This will be dynamic instead of hard coded
                       fontWeight: FontWeight.w600,
                     ),
                   ),
@@ -55,7 +57,7 @@ class RecipeTile extends StatelessWidget {
                     'Source: $recipeSource',
                     style: TextStyle(
                       fontSize: 15.0,
-                      color: Colors.grey[600],
+                      color: Colors.grey[500], //made this little brighter
                       fontWeight: FontWeight.w600,
                     ),
                   ),

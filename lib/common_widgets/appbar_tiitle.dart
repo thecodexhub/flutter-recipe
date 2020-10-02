@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterrecipe/helpers/dynamic_theme.dart';
 
 class AppBarTitle extends StatelessWidget {
   @override
@@ -9,15 +10,16 @@ class AppBarTitle extends StatelessWidget {
         Text(
           'Food ',
           style: TextStyle(
-            color: Colors.black,
-            fontWeight: FontWeight.w600,
+            // Checking the theme and changing the color accordingly
+            color: isThemeDark(context) ? Colors.white : Colors.black,
+            fontWeight: FontWeight.w800,
           ),
         ),
         Text(
           'Recipe',
           style: TextStyle(
             color: Colors.red[900],
-            fontWeight: FontWeight.w600,
+            fontWeight: FontWeight.w800,
           ),
         ),
       ],
