@@ -1,9 +1,11 @@
+import 'package:dynamic_theme/dynamic_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutterrecipe/common_widgets/appbar_tiitle.dart';
 import 'package:flutterrecipe/common_widgets/category_tile.dart';
 import 'package:flutterrecipe/common_widgets/recipe_tile.dart';
 import 'package:flutterrecipe/helpers/data.dart';
+import 'package:flutterrecipe/helpers/dynamic_theme.dart';
 import 'package:flutterrecipe/helpers/recipe.dart';
 import 'package:flutterrecipe/model/category_model.dart';
 import 'package:flutterrecipe/model/recipe_model.dart';
@@ -68,14 +70,35 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
+  // Function to switch the theme.
+  void changeBrightness() {
+    DynamicTheme.of(context).setBrightness(
+      Theme.of(context).brightness == Brightness.dark
+          ? Brightness.light
+          : Brightness.dark,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      //backgroundColor: Colors.white, ~dynamic
       appBar: AppBar(
+        centerTitle: true,
         backgroundColor: Colors.transparent,
         elevation: 0.0,
         title: AppBarTitle(),
+
+        // Theme changer Switch
+        actions: [
+          IconButton(
+            icon: Icon(
+              isThemeDark(context) ? Icons.wb_sunny : Icons.brightness_2,
+              color: isThemeDark(context) ? Colors.white : Colors.black,
+            ),
+            onPressed: () => changeBrightness(),
+          )
+        ],
       ),
       body: _buildContent(),
     );
@@ -113,13 +136,13 @@ class _HomeScreenState extends State<HomeScreen> {
               "Today's Special Dishes",
               style: TextStyle(
                 fontSize: 18.0,
-                color: Colors.black,
+                //color: Colors.black, ~dynamic
                 fontWeight: FontWeight.w600,
               ),
             ),
           ),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 12.0, vertical: 25.0),        
+            padding: EdgeInsets.symmetric(horizontal: 12.0, vertical: 25.0),
             child: _loading == true
                 ? Center(
                     child: CircularProgressIndicator(),

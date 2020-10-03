@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterrecipe/helpers/dynamic_theme.dart';
 
 class SearchScreen extends StatelessWidget {
   static Future<void> show(BuildContext context) async {
@@ -16,12 +17,12 @@ class SearchScreen extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0.0,
         iconTheme: IconThemeData(
-          color: Colors.black,
-        ),
+            //color: Colors.black,
+            ),
         title: Text(
           'Search',
           style: TextStyle(
-            color: Colors.black,
+            color: isThemeDark(context) ? Colors.white : Colors.black,
             fontWeight: FontWeight.w600,
           ),
         ),
