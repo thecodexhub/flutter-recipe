@@ -1,6 +1,6 @@
 # Flutter Recipe
 
-Simple food recipe application that fetches food recipes using API.
+Simple food recipe application that fetches food recipes using Edamam API.
 
 ## Overview:
 
