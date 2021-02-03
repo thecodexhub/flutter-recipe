@@ -8,6 +8,7 @@ Ths project has several features:
 - `HomeScreen` contains special dishes fetched from the API in a `staggered_grid_view` manner.
 - `HomeScreen` also contains some categories along with a `search bar` to search recipes using any ingredient.
 - `CategoryScreen` shows 10 recipes based on the category chosen. 
+- Dynamic theme
 
 _Note: This project is made using Edamam API, to know more click [here](https://developer.edamam.com/)_
 
