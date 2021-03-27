@@ -21,10 +21,6 @@ _Note: This project is made using Edamam API, to know more click [here](https://
  <td style="text-align: center">
  <img src="media/ss2.png" width="200"/>
  </td>
- </tr></table>
- </div>
-    
- <div style="text-align: center"><table><tr>
  <td style="text-align: center">
  <img src="media/ss3.png" width="200" />
  </td>
